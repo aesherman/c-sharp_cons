@@ -6,13 +6,33 @@ namespace Zazingo.Fitness
     {
         static void Main()
         {
-            // Prompt user for minutes exercized
-            Console.Write("Enter how many minutes you exercized: ");
-            
-            string entry = Console.ReadLine(); 
-            // Add minutes exercized to total
-            // Display total minutes exercized to the screen
-            // Repeat until the user quits
+            int runningTotal = 0;
+            bool keepGoing = true;
+
+            while (keepGoing)
+            {
+                // Prompt user for minutes exercized
+                Console.Write("Enter how many minutes you exercized or type \"quit\" to exit: ");
+                string entry = Console.ReadLine(); 
+
+                if (entry == "quit")
+                {
+                    keepGoing = false;
+                }
+                else
+                {
+                int minutes = int.Parse(entry);
+                
+                // Add minutes exercized to total
+                runningTotal = runningTotal + minutes;
+                // Display total minutes exercized to the screen
+                Console.WriteLine("You've exercized " + runningTotal + " minutes");
+                }
+
+                // Repeat until the user quits
+            }
+
+            Console.WriteLine("Goodbye");
 
         }
     }
