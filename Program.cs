@@ -1,5 +1,7 @@
 using System;
 
+// using is like import
+
 namespace Zazingo.Fitness
 {
     class Program
